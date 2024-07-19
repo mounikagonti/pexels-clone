@@ -1,0 +1,19 @@
+.discover {
+  .discover_wrapper {
+    .title {
+      @include displayCenter(center, center);
+      margin-top: 50px;
+    }
+    .heroes_of_the_week {
+      .sub_title {
+        margin-top: 50px;
+      }
+      .best_pexels_wrapper {
+        @include displayCenter(center, center);
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 50px;
+      }
+    }
+  }
+}

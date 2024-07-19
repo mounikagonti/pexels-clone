@@ -1,0 +1,21 @@
+.features {
+  margin-top: 50px;
+  .features_wrapper {
+    @include displayCenter(center, center);
+    flex-wrap: wrap;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 30px;
+      padding: 15px 25px;
+      &:hover {
+        background-color: #000000;
+        color: #ffffff;
+        border-radius: 25px;
+      }
+    }
+  }
+}

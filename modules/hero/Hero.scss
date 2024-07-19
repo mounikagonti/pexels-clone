@@ -1,0 +1,63 @@
+.hero {
+  .hero_wrapper {
+    padding-top: 20px;
+    .hero_top {
+      @include displayCenter(center, center);
+      flex-wrap: wrap;
+      gap: 10px;
+      a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 30px;
+        padding: 15px 25px;
+        &:hover {
+          background-color: #000000;
+          color: #ffffff;
+          border-radius: 25px;
+        }
+      }
+    }
+    .hero_middle {
+      @include displayCenter(center, space-between);
+      margin-top: 20px;
+      .trending {
+        display: flex;
+        padding: 10px 15px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+          rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        border: 1px solid black;
+        select {
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+        .trending_text {
+          font-weight: 600;
+        }
+        .arrow_down {
+          margin-left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+    .photo_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 5px;
+      margin-top: 30px;
+      .img_container {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+
+        .photo-item {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

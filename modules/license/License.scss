@@ -1,0 +1,14 @@
+.license {
+  .license_wrapper {
+    @include displayCenter(center, center);
+    flex-direction: column;
+    h1 {
+      font-size: 49px;
+      margin-top: 50px;
+    }
+    h4 {
+      font-size: 21px;
+      margin-top: 20px;
+    }
+  }
+}

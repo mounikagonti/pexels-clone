@@ -1,0 +1,28 @@
+.bestpexels {
+  .bestpexels_wrapper {
+    .one {
+      .top_img {
+        grid-column: 1 /4;
+        grid-row: 1 / 3;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+    }
+    .two {
+      display: flex;
+      gap: 5px;
+      margin-top: 5px;
+      .top_img {
+        &:nth-child(1) {
+          border-bottom-left-radius: 30px;
+        }
+        &:nth-child(3) {
+          border-bottom-right-radius: 30px;
+        }
+      }
+    }
+    h2 {
+      margin-top: 15px;
+    }
+  }
+}
