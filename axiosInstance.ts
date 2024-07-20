@@ -1,14 +1,26 @@
+// import axios from 'axios'
+
+// const Axios = axios.create({
+//   baseURL: '/api',
+// })
+
+// export default Axios
+
 import axios from 'axios'
 
 const Axios = axios.create({
   baseURL: 'https://api.pexels.com/v1',
-  timeout: 5000,
-  headers: {Authorization: process.env.NEXT_PUBLIC_PEXELS_API_KEY},
+  headers: {
+    Authorization: process.env.NEXT_PUBLIC_PEXELS_API_KEY,
+    // 'Access-Control-Allow-Origin': '*',
+    // 'Access-Control-Allow-Headers': '*',
+  },
 })
 
 // Add a request interceptor
 Axios.interceptors.request.use(
   function (config) {
+    console.log(config)
     return config
   },
   function (error) {

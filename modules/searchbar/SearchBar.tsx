@@ -34,11 +34,11 @@ const SearchBar = () => {
               <div className='photos'>
                 <select value={selectedOption} onChange={handleSelectChange}>
                   <option value='photos'>
-                    <BiImage style={{marginRight: '5px'}} />
+                    {/* /<BiImage style={{marginRight: '5px'}} /> */}
                     Photos
                   </option>
                   <option value='videos'>
-                    <IoPlaySharp style={{marginRight: '5px'}} />
+                    {/* <IoPlaySharp style={{marginRight: '5px'}} /> */}
                     Videos
                   </option>
                 </select>

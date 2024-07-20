@@ -7,12 +7,12 @@ import Link from 'next/link'
 import React from 'react'
 import useMeasure from 'react-use-measure'
 
-
-
 const Hero = () => {
   const {query} = useSearchContext()
   const {loading, data} = useSearchApiResults({query})
   const [ref, bounds] = useMeasure()
+  const photos = (data as curatedResponse)?.photos || []
+  console.log('photos', photos)
 
   console.log('data', data)
 
@@ -29,7 +29,7 @@ const Hero = () => {
           <div className='hero_middle'>
             <h2>Free Stock Photos</h2>
             <div className='trending'>
-              <select name='' id=''>
+              <select>
                 <option value='Trending'>Trending</option>
                 <option value='New'>New</option>
               </select>
@@ -39,7 +39,7 @@ const Hero = () => {
             {loading ? (
               <p>Loading...</p>
             ) : (
-              (data as curatedResponse).photos?.map((photo: any) => (
+              photos?.map((photo: any) => (
                 <div key={photo?.id} className='img_container'>
                   <Image
                     src={photo?.src.medium}

@@ -40,7 +40,11 @@ export const useCuratedPhotos = () => {
   const getCuratedPhotos = async () => {
     try {
       setLoading(true)
-      const response = await Axios.get('/curated')
+      const response = await Axios.get('/curated', {
+        params: {
+          per_page: 15,
+        },
+      })
       setData(response?.data)
     } catch (error: any) {
       console.log(error.message)
